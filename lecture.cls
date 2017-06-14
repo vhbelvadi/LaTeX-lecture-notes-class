@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{Lecture}
+\ProvidesClass{lecture}
 \RequirePackage{ifthen}
 \RequirePackage[nodayofweek]{datetime}
 
@@ -114,6 +114,8 @@
 %%% Load default arguments if empty
 \ifthenelse{\isundefined{\notes@type}}{\ExecuteOptions{course}}{}
 \ifthenelse{\isundefined{\notes@lang}}{\ExecuteOptions{english}}{}
+\ifthenelse{\isundefined{\notes@columns}}{\ExecuteOptions{onecolumn}}{}
+\ifthenelse{\isundefined{\notes@side}}{\ExecuteOptions{oneside}}{}
 
 %%% Common macroes
 \RequirePackage[\notes@lang]{babel}
