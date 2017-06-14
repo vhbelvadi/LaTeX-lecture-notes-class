@@ -1,0 +1,95 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{Commons}
+
+%%%%%%%%%%%%%%%%%%%% ABBREVIATIONS %%%%%%%%%%%%%%%%%%%%
+\newcommand{\pha}{{}_\bullet}
+\newcommand{\phb}{{}_\blacktriangle}
+\newcommand{\phc}{\blacktriangle}
+
+\newcommand{\dotleq}{\mathrel{\raisebox{1.2ex}{$⋅$}\mkern-13.5mu \leq}}
+\renewcommand{\projlim}{\varprojlim}
+\renewcommand{\injlim}{\varinjlim}
+\newcommand{\dottimes}{\stackrel[\cdot]{\times}}
+
+%\newcommand{\xra}[1]{\xrightarrow{#1}}
+\newcommand{\xra}[1]{\, \tikz[baseline] \draw (0pt,3.5pt) -- (7pt,3.5pt); {\raisebox{1.5pt}{\ensuremath{\scriptstyle #1}}} \tikz[baseline] \draw [->] (0pt,3.5pt) -- (7pt,3.5pt); \, }
+
+\renewcommand{\obar}[1]{\overline{#1}}
+\newcommand{\ubar}[1]{\underline{#1}}
+
+\newcommand{\set}[1]{\left\{#1\right\}}
+\newcommand{\pa}[1]{\left(#1\right)}
+\newcommand{\ang}[1]{\left<#1\right>}
+\newcommand{\bra}[1]{\left[#1\right]}
+\newcommand{\abs}[1]{\left|#1\right|}
+\newcommand{\norm}[1]{\left\|#1\right\|}
+
+\newcommand{\mat}[1]{\begin{matrix}#1\end{matrix}}
+\newcommand{\pmat}[1]{\pa{\mat{#1}}}
+\newcommand{\bmat}[1]{\bra{\mat{#1}}}
+\newcommand{\sismat}[1]{\left\{\mat{#1}\right.}
+\newcommand{\sm}[1]{\begin{smallmatrix}#1\end{smallmatrix}}
+\newcommand{\psm}[1]{\pa{\sm{#1}}}
+\newcommand{\bsm}[1]{\bra{\sm{#1}}}
+\newcommand{\tci}[2]{\set{\,#1 \mid{} #2\,}}
+\newcommand{\tcia}[2]{\ang{\,#1 \mid{} #2\,}}
+\newcommand{\pfrac}[2]{\pa{\frac{#1}{#2}}}
+\newcommand{\bfrac}[2]{\bra{\frac{#1}{#2}}}
+\newcommand{\psfrac}[2]{\pa{\sfrac{#1}{#2}}}
+\newcommand{\bsfrac}[2]{\bra{\sfrac{#1}{#2}}}
+\newcommand{\der}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pder}[2]{\pfrac{\partial #1}{\partial #2}}
+\newcommand{\sder}[2]{\sfrac{\partial #1}{\partial #2}}
+\newcommand{\psder}[2]{\psfrac{\partial #1}{\partial #2}}
+
+\newcommand{\leg}[2]{\pfrac{#1}{#2}}
+\newcommand{\estdim}[2]{\left[#1 : #2\right]}
+\newcommand{\abel}[2]{\left[#1, #2\right]}
+\newcommand{\brk}[2]{\left[#1,#2\right]}
+
+%%%%%%%%%%%%%%%%%%%% OPERATORS %%%%%%%%%%%%%%%%%%%%
+\DeclareMathOperator{\Schemes}{\mathfrak{Sch}}
+\DeclareMathOperator{\AffineSchemes}{\mathfrak{AffSch}}
+\DeclareMathOperator{\Sets}{\mathfrak{Sets}}
+\DeclareMathOperator{\Groupoids}{\mathfrak{Groupoids}}
+\DeclareMathOperator{\TopologicalSpaces}{\mathfrak{Top}}
+
+\DeclareMathOperator{\Alb}{Alb}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\B}{B}
+\DeclareMathOperator{\cod}{cod}
+\DeclareMathOperator{\de}{d}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\Div}{Div}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Fix}{Fix}
+\DeclareMathOperator{\gen}{g}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\Hilb}{Hilb}
+\DeclareMathOperator{\Ho}{H}
+\DeclareMathOperator{\ho}{h}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\Isom}{Isom}
+\DeclareMathOperator{\Mod}{Mod}
+\DeclareMathOperator{\Mor}{Mor}
+\DeclareMathOperator{\argen}{p_a}
+\DeclareMathOperator{\geomgen}{p_g}
+\DeclareMathOperator{\Pic}{Pic}
+\DeclareMathOperator{\Proj}{Proj}
+\DeclareMathOperator{\irr}{q}
+\DeclareMathOperator{\res}{res}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Sing}{Sing}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tors}{Tors}
+\DeclareMathOperator{\vp}{v.p.}
+
+
+%%%%%%%%%%%%%%%%%%%% LETTERS %%%%%%%%%%%%%%%%%%%%
+\newcommand{\frakM}{\mathfrak{M}}
+\newcommand{\frakm}{\mathfrak{m}}
+
