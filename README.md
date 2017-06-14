@@ -139,17 +139,19 @@ Either fork this project and submit a pull request or, *only in case of translat
 2. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
 3. Package dependencies will not reduce. This type of collaboration is what LaTeX packages are for and they're free. When (and if) some package drops support we can think of bridging the code.
 
-## Authors
+## End notes
+
+### Authors
 
 * **V.H. Belvadi**
 
 * Stefano Maggiolo (Initial, Italian translations)
 
-## License
+### License
 
 This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
 
-## Acknowledgments
+### Acknowledgments
 
 Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for helping me kickstart this and for his Italian translations.
 
