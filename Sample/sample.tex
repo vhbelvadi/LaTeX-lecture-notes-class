@@ -1,0 +1,92 @@
+\documentclass[english,course,headertitle]{lecture}
+\usepackage{lipsum}
+%
+% First, provide some data about this document
+\title{Main title of the lecture}
+\subtitle{Subtitle of the lecture}
+\shorttitle{Shortened title} % For headers; if undefined, the usual title will be used
+\ccode{Code 7.45} % Most of these data are not compulsory
+\subject{Subject of the Talk}
+\author{Author's name}
+\spemail{speaker@email.com}
+\email{email@email.com}
+\speaker{Speaker's name}
+\date{02}{11}{2134}
+\dateend{07}{11}{2134}
+\conference{Lecture hall 7}
+\place{University of Physics}
+\flag{An extra line if you need it.}
+\attn{Place anything here to gather your readers' attention. This could be a warning, a disclaimer, a license, or, more likely, some helpful suggestions for your readers.}
+%
+% And then begin your document
+\begin{document}
+\section{Example section}
+\lecture[1 hour]{12}{06}{2017} % Mark new lectures if you like
+Pick between \texttt{seminar}, \texttt{talk} or \texttt{course} (this document) to get appropriately different layouts. Seminars being shorter, for example, will not carry the contents section you see above but are otherwise mostly similar to courses. Talks are two-column layouts, which means you cannot have lecture numbers (on your right) or margin notes (see below). Use appropriate options. For more consult \url{http://vhbelvadi.com/latex-lecture-notes-class}.
+%
+\lipsum[1-2]
+%
+\section{Another section by itself}
+\lipsum[3] Here, for example, is an \texttt{equation} environment:
+\begin{equation}
+\mathbf{v} = { \mathbf{s} \over t } \label{eq:velocity}
+\end{equation}%
+Nam nulla erat, elementum nec magna sit amet, vestibulum rhoncus augue. Praesent non fermentum nulla, quis blandit tortor.\margintext{This is some margin text and you can include such text anywhere in your notes.} Maecenas ut nisi condimentum nisi iaculis porttitor eu sed metus. Proin faucibus aliquet odio, ac lobortis tortor. Mauris porta molestie tortor blandit pretium. Nulla pulvinar id mauris ut efficitur. Donec posuere tortor a odio pellentesque tincidunt. Nulla mi nunc, accumsan nec lectus ut, euismod vulputate libero.
+%
+Maecenas eu hendrerit metus. Aenean consequat, ex a semper tristique, leo ipsum blandit dui, pharetra consectetur magna enim ac lectus. Pellentesque vel purus malesuada metus scelerisque aliquam. Sed finibus ex sit amet eros faucibus congue. Nulla ut dui egestas, dignissim neque ut, fringilla massa.
+%
+\subsection{This is a subsection by itself}
+\lipsum[11]
+%
+And this is a nice \texttt{\$\$...\$\$} display environment:
+$$
+\Delta v = \int\displaylimits_{t_0}^{t_1} a \, \textrm{d}t
+$$
+Maecenas ut nisi condimentum nisi iaculis porttitor eu sed metus. Proin faucibus aliquet odio, ac lobortis tortor. Mauris porta molestie tortor blandit pretium. Nulla pulvinar id mauris ut efficitur. Donec posuere tortor a odio pellentesque tincidunt. Nulla mi nunc, accumsan nec lectus ut, euismod vulputate libero.
+%
+And finally we have the \texttt{align/align*} environment:
+\begin{align}
+x_f - x_i &= \bar{v}t \nonumber\\
+\Rightarrow s &= \bar{v}t
+\end{align}
+\lipsum[6]
+%
+\section{Yet another section}
+\subsection{And a subsection beneath it}
+\lecture[1 hour]{13}{06}{2017}
+\lipsum[7]
+%
+\subsection{And now a subsection}
+\subsubsection{With a subsubsection following it}
+%
+Integer pharetra nulla scelerisque purus luctus iaculis. Mauris pulvinar erat non dui pretium, sed vestibulum sapien condimentum. Nam in urna quis sapien rhoncus placerat vitae sit amet odio. Vivamus finibus euismod nibh vestibulum lobortis.\margintext{These ideas were probably discussed in lecture 1 in a parallel universe.} Integer arcu tortor, vestibulum sit amet iaculis ut, ullamcorper non ante. Pellentesque consectetur nec odio quis placerat. Vestibulum vehicula massa vel euismod blandit.
+%
+\lipsum[8]
+%
+\margintext{\protect\vspace{2cm}Table \ref{tab:mori} courtesy of Mori, L.F. `Tables in \LaTeX2$\epsilon$: Packages and Methods'.}
+\begin{table}[h]
+\centering
+\begin{tabular}{clcc}
+\toprule
+\multicolumn{2}{c}{$D$} & $P_u$ & $\sigma_N$\\
+\multicolumn{2}{c}{(in)} & (lbs) & (psi)\\\toprule
+\multirow{3}*{5} & test 1 & 285 & 38.00\\\cmidrule(l){2-4} 
+& test 2 & 287 & 38.27\\\cmidrule(l){2-4}
+& test 3 & 230 & 30.67\\\midrule
+\multirow{3}*{10} & test 1 & 430 & 28.67\\\cmidrule(l){2-4} 
+& test 2 & 433 & 28.87\\\cmidrule(l){2-4}
+& test 3 & 431 & 28.73\\\bottomrule
+\end{tabular}
+\caption{A table beautified by the \protect\texttt{booktabs} package.}\label{tab:mori}
+\end{table}
+%
+\lipsum[9]
+%
+\subsubsection{This subsubsection is all by itself}
+\lipsum[12-14]
+%
+\vskip7ex
+\centering
+* * *
+%
+\end{document}%
