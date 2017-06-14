@@ -83,7 +83,6 @@
   \ifthenelse{\isundefined{\notes@cleardoublepage}}{\ExecuteOptions{nocleardoublepage}}{}%
   \ifthenelse{\isundefined{\notes@columns}}{\ExecuteOptions{onecolumn}}{}%
   \ifthenelse{\isundefined{\notes@side}}{\ExecuteOptions{twoside}}{}%
-  %\PassOptionsToPackage{}{amsmath}
 }
 \DeclareOption{seminar}{%
   \newcommand{\notes@type}{seminar}%
@@ -92,7 +91,6 @@
   \ifthenelse{\isundefined{\notes@cleardoublepage}}{\ExecuteOptions{nocleardoublepage}}{}%
   \ifthenelse{\isundefined{\notes@columns}}{\ExecuteOptions{onecolumn}}{}%
   \ifthenelse{\isundefined{\notes@side}}{\ExecuteOptions{twoside}}{}%
-  %\PassOptionsToPackage{}{amsmath}
 }
 \DeclareOption{talk}{%
   \newcommand{\notes@type}{talk}%
@@ -109,7 +107,7 @@
 \ProcessOptions
 
 %%% Load default class
-\LoadClass[a4paper,11pt,\notes@columns,\notes@side]{article}
+\LoadClass[a4paper,11pt,\notes@columns,\notes@side]{article}%
 
 %%% Load default arguments if empty
 \ifthenelse{\isundefined{\notes@type}}{\ExecuteOptions{course}}{}
@@ -272,13 +270,13 @@
              }{}
   \ifthenelse{\equal{\notes@header}{section}}%
              {%
-               \renewcommand{\sectionmark}[1]{\markboth{\thesection.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}%
+               \renewcommand{\sectionmark}[1]{\markboth{{\footnotesize\thesection}.\ \smallcaps{#1}}{\thesection.\ \smallcaps{#1}}}%
                \renewcommand{\subsectionmark}[1]{}%
              }{}
   \ifthenelse{\equal{\notes@header}{subsection}}%
              {
-               \renewcommand{\sectionmark}[1]{\markboth{\thesection.\ \smallcaps{#1}}{}}%\thesection.\ \smallcaps{#1}}}
-               \renewcommand{\subsectionmark}[1]{\markright{\thesubsection.\ \smallcaps{#1}}}%
+               \renewcommand{\sectionmark}[1]{\markboth{{\scriptsize\thesection}.\ \smallcaps{#1}}{}}%\thesection.\ \smallcaps{#1}}}
+               \renewcommand{\subsectionmark}[1]{\markright{{\scriptsize\thesubsection}.\ \smallcaps{#1}}}%
              }{}
   \fancyhf{}
   \ifthenelse{\equal{\notes@header}{title}}{%
