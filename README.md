@@ -123,7 +123,7 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 ### Dependencies
 
-`hyperref` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathtools` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `csquotes` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `microtype` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `amsmath` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `booktabs` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `multirow` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kpfonts` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `fancyhdr` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mparhack` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `tikz` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathdots` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `xfrac` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `faktor` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `cancel` `babel`
+`hyperref` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathtools` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `csquotes` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `microtype` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `amsmath` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `booktabs` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `multirow` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kpfonts` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `fancyhdr` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mparhack` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `tikz` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathdots` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `xfrac` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `faktor` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `cancel` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `babel`
 
 ### Version history
 
