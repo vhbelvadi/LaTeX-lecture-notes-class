@@ -7,7 +7,7 @@
 
 **Author:** V.H. Belvadi
 
-**Website:** [http://vhbelvadi.com/](http://vhbelvadi.com/)
+**Webpage:** [http://vhbelvadi.com/latex-lecture-notes-class/](http://vhbelvadi.com/latex-lecture-notes-class)
 
 **Current release:** v1.1
 
