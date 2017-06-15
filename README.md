@@ -9,7 +9,7 @@
 
 **Webpage:** [http://vhbelvadi.com/latex-lecture-notes-class/](http://vhbelvadi.com/latex-lecture-notes-class)
 
-**Current release:** v1.1
+**Current release:** v1.2
 
 **Description:** A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
 A detailed article about this class can be found on [the author's website](http://vhbelvadi.com/latex-lecture-notes-class/).
@@ -122,7 +122,13 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 ### Dependencies
 
-`hyperref` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathtools` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `csquotes` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `microtype` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `amsmath` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `booktabs` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `multirow` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kpfonts` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `fancyhdr` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mparhack` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `tikz` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathdots` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `xfrac` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `faktor` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `cancel`
+`hyperref` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathtools` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `csquotes` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `microtype` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `amsmath` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `booktabs` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `multirow` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kpfonts` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `fancyhdr` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mparhack` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `tikz` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathdots` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `xfrac` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `faktor` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `cancel` `babel`
+
+### Version history
+
+- 1.2 French language support
+- 1.1 Improved default headers
+- 1.0 Initial release
 
 ## The road ahead
 
