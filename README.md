@@ -77,6 +77,7 @@ The following are primary options that must compulsorily be included. Pick one f
 1. The **language** of your document:
 
 - `english`
+- `french`
 - `italian` (see *acknowledgements* and *the road ahead*)
 
 2. The **type** of your lecture notes:
