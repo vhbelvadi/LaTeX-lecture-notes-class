@@ -5,9 +5,15 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/built-with-science.svg)](http://forthebadge.com)
 
-Current release: **v1.1**
+**Author:** V.H. Belvadi
 
-A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
+**Website:** [http://vhbelvadi.com/](http://vhbelvadi.com/)
+
+**Current release:** v1.1
+
+**Project site:** [Click here to view](https://vhbelvadi.github.io/LaTeX-lecture-notes-class/) (You're probably already here)
+
+**Description:** A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
 
 A detailed article about this class can be found on [the author's website](http://vhbelvadi.com/latex-lecture-notes-class/).
 The same data condensed into brief notes about working with this class, for those who are familiar with this sort of thing, can be found here.
@@ -141,19 +147,13 @@ Either fork this project and submit a pull request or, *only in case of translat
 
 ## End notes
 
-### Authors
-
-* **V.H. Belvadi**
-
-* Stefano Maggiolo (Initial, Italian translations)
-
 ### License
 
 This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md) file for details.
 
 ### Acknowledgments
 
-Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for helping me kickstart this and for his Italian translations.
+Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations.
 
 ***
 
