@@ -12,7 +12,6 @@
 **Current release:** v1.1
 
 **Description:** A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
-
 A detailed article about this class can be found on [the author's website](http://vhbelvadi.com/latex-lecture-notes-class/).
 The same data condensed into brief notes about working with this class, for those who are familiar with this sort of thing, can be found below.
 
