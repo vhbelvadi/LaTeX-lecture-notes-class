@@ -11,12 +11,12 @@
 
 **Current release:** v1.1
 
-**Project site:** [Click here to view](https://vhbelvadi.github.io/LaTeX-lecture-notes-class/) (You're probably already here)
-
 **Description:** A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
 
 A detailed article about this class can be found on [the author's website](http://vhbelvadi.com/latex-lecture-notes-class/).
-The same data condensed into brief notes about working with this class, for those who are familiar with this sort of thing, can be found here.
+The same data condensed into brief notes about working with this class, for those who are familiar with this sort of thing, can be found below.
+
+**Download**: To work with this class the absolute minimum requirements are the .cls and .sty files, but this repository has several other files too. The easiest approach is to [download the latest release](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest) and manually extract the two required files. Alternately, you can use svn or git sparse checkouts.
 
 ## Installing the class
 
@@ -116,7 +116,7 @@ You can also include secondary options for your document. Again, pick one from e
 
 There are some additional commands you can use _inside your document_, i.e. within `\begin{document}` and `\end{document}`, besides those which are already part of the blueprint given above:
 
-1. `\lecture[duration]{dd}{mm}{yyyy}` for use in `course` type documents (see [Sample.pdf](Sample/Sample.pdf)) for providing information about lectures in the margin
+1. `\lecture[duration]{dd}{mm}{yyyy}` for use in `course` type documents for providing information about lectures in the margin
 2. `\separator` for use in `talk` type documents to draw a visually helpful horizontal separator line
 3. `\tosay{message}` for use in `talk` type documents to print messages inside a box to help recall important data
 4. `\margintext{message}` to make useful notes in the margin
@@ -142,8 +142,9 @@ Either fork this project and submit a pull request or, *only in case of translat
 ### Improvements
 
 1. The `headerno` and a couple of other options with minor errors will be corrected over time.
-2. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
-3. Package dependencies will not reduce. This type of collaboration is what LaTeX packages are for and they're free. When (and if) some package drops support we can think of bridging the code.
+2. A .gitignore will be added at some point just to make it simpler to clone this repo
+3. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
+4. Package dependencies will not reduce. This type of collaboration is what LaTeX packages are for and they're free. When (and if) some package drops support we can think of bridging the code.
 
 ## End notes
 
