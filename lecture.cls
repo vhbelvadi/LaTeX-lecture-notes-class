@@ -40,6 +40,25 @@
   \newcommand{\notes@conjecturename}{congettura}
   \newcommand{\notes@claimname}{ipotesi}
   \newcommand{\notes@notationname}{notazione}}
+  
+  \DeclareOption{french}{
+  \newcommand{\notes@lang}{french}
+  \dateitalian
+  \newcommand{\notes@lecturename}{Conf\'{e}rence}
+  \newcommand{\notes@theoremname}{th\'{e}or\`{e}m}
+  \newcommand{\notes@propositionname}{proposition}
+  \newcommand{\notes@lemmaname}{lemme}
+  \newcommand{\notes@corollaryname}{corollaire}
+  \newcommand{\notes@definitionname}{d\'{e}finition}
+  \newcommand{\notes@examplename}{exemple}
+  \newcommand{\notes@exercisename}{exercise}
+  \newcommand{\notes@remarkname}{remarque}
+  \newcommand{\notes@factname}{fait}
+  \newcommand{\notes@problemname}{probl\`{e}me}
+  \newcommand{\notes@conjecturename}{conjecture}
+  \newcommand{\notes@claimname}{d\'{e}claration}
+  \newcommand{\notes@notationname}{notation}}
+  
 % Header (headertitle,headersection,headersubsection, headerno)
 %   headertitle displays speaker on left and title on right.
 %   headersection displays section on left and right
