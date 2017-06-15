@@ -85,6 +85,8 @@ The following are primary options that must compulsorily be included. Pick one f
 - `course` for a collection of lectures (over a semester or over a few days)
 - `talk` for brief notes for speakers (or any other use you can think of for condensed, two-column layouts)
 
+**NB** Please delete all aux files and then compile if you decide to change languages halfway through. Compile twice to update TOC in case of `course` type documents.
+
 #### Optional
 
 You can also include secondary options for your document. Again, pick one from each set below:
