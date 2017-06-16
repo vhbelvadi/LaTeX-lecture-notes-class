@@ -9,7 +9,7 @@
 
 **Webpage:** [http://vhbelvadi.com/latex-lecture-notes-class/](http://vhbelvadi.com/latex-lecture-notes-class)
 
-**Current release:** v1.2 <a href="https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20release-brightgreen.svg" style="vertical-align: text-bottom;margin-left: 24px;"></a>
+**Current release:** v1.3 <a href="https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20release-brightgreen.svg" style="vertical-align: text-bottom;margin-left: 24px;"></a>
 
 **Description:** A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
 A detailed article about this class can be found on [the author's website](http://vhbelvadi.com/latex-lecture-notes-class/).
@@ -92,10 +92,12 @@ The following are primary options that must compulsorily be included. Pick one f
 You can also include secondary options for your document. Again, pick one from each set below:
 
 1. Customise page headers as needed:
-- `headertitle` to display the main title/short alternative title (using this is recommended)
+- `headertitle` to display the main title/short alternative title
 - `headersection` to display the current/next section as appropriate
 - `headersubsection` to display the current/next subsection as appropriate
-- `headerno` for no header separator line (needs more work, use at your own risk)
+- `headerno` for a blank header (footers still display page numbers)
+
+**NB** The default behaviour is to display current/next sections and subsections.
 
 2. Customise theorem numbering as needed:
 - `theoremnosection`
@@ -145,7 +147,7 @@ Either fork this project and submit a pull request or, *only in case of translat
 ### Known errors
 
 1. ~Not specifying a custom page header results in ugly defaults.~
-2. Using the `headerno` option messes up page header text dimensions.
+2. ~Using the `headerno` option messes up page header text dimensions.~
 
 ### Improvements/roadmap
 
