@@ -232,12 +232,6 @@
 \titleformat{\section}{\relax\centering\large\lsstyle}{\small{\thesection}}{0.5em}{\otherscshape\MakeLowercase}
 \PassOptionsToPackage{letterspace=0}{microtype}
 
-%\renewcommand{\section}{\notes@opensection%
-  %\@startsection {section}{1}{\z@}%
-  %{-3.5ex \@plus -1ex \@minus -.2ex}%
-  %{2.3ex \@plus.2ex}%
-  %{\centering\normalsize\otherscshape\textls[75]}}
-
 \renewcommand{\cftsecfont}{\normalfont}%
 \renewcommand{\cftsecpagefont}{\normalfont}%
 \setcounter{secnumdepth}{3}
@@ -315,7 +309,10 @@
              }
   \fancyfoot[RO,LE]{\smallcaps\thepage}
   \ifthenelse{\equal{\notes@header}{no}}%
-    {\renewcommand{\headrulewidth}{0pt}}%
+    {\renewcommand{\headrulewidth}{0pt}%
+    \fancyhead[LE]{}%
+    \fancyhead[RO]{}%
+    }%
     {\renewcommand{\headrulewidth}{0.5pt}}
 
   \ifthenelse{\isundefined{\notes@subject}}{\subject{}}{}
