@@ -7,7 +7,24 @@
 % Language (english,italian)
 \DeclareOption{english}{
   \newcommand{\notes@lang}{english}
-  \newdateformat{usvardate}{\ordinal{DAY} \monthname[\THEMONTH] \THEYEAR}
+\dateenglish
+  \newcommand{\notes@lecturename}{Lecture}
+  \newcommand{\notes@theoremname}{theorem}
+  \newcommand{\notes@propositionname}{proposition}
+  \newcommand{\notes@lemmaname}{lemma}
+  \newcommand{\notes@corollaryname}{corollary}
+  \newcommand{\notes@definitionname}{definition}
+  \newcommand{\notes@examplename}{example}
+  \newcommand{\notes@exercisename}{exercise}
+  \newcommand{\notes@remarkname}{remark}
+  \newcommand{\notes@factname}{fact}
+  \newcommand{\notes@problemname}{problem}
+  \newcommand{\notes@conjecturename}{conjecture}
+  \newcommand{\notes@claimname}{claim}
+  \newcommand{\notes@notationname}{notation}}
+  \DeclareOption{usenglish}{
+  \newcommand{\notes@lang}{english}
+  \newdateformat{usvardate}{\monthname[\THEMONTH] \ordinal{DAY}, \THEYEAR}
   \usvardate
   \newcommand{\notes@lecturename}{Lecture}
   \newcommand{\notes@theoremname}{theorem}
@@ -43,7 +60,7 @@
   
   \DeclareOption{french}{
   \newcommand{\notes@lang}{french}
-  \dateitalian
+  \datefrench
   \newcommand{\notes@lecturename}{Conf\'{e}rence}
   \newcommand{\notes@theoremname}{th\'{e}or\`{e}m}
   \newcommand{\notes@propositionname}{proposition}
@@ -243,8 +260,9 @@
 
 
 %%% Preamble commands (as title, author, ...)
-\renewcommand{\date}[3]{\newdate{@date}{#1}{#2}{#3}}
+\renewcommand{\date}[3]{\newcommand{\notes@datestartdef}{}\newdate{@date}{#1}{#2}{#3}}
 \newcommand{\dateend}[3]{\newcommand{\notes@dateenddef}{}\newdate{@dateend}{#1}{#2}{#3}}
+\newcommand{\season}[1]{\newcommand{\notes@season}{#1}}
 \newcommand{\ccode}[1]{\newcommand{\notes@ccode}{#1}}
 \newcommand{\email}[1]{\newcommand{\notes@email}{#1}}
 \newcommand{\spemail}[1]{\newcommand{\notes@spemail}{#1}}
@@ -315,9 +333,15 @@
     }%
     {\renewcommand{\headrulewidth}{0.5pt}}
 
+  \ifthenelse{\isundefined{\notes@subtitle}}{\subtitle{}}{}
   \ifthenelse{\isundefined{\notes@subject}}{\subject{}}{}
   \ifthenelse{\isundefined{\notes@email}}{\email{}}{}
   \ifthenelse{\isundefined{\notes@speaker}}{\speaker{}}{}
+  \ifthenelse{\isundefined{\notes@speaker}}{\speaker{}}{}
+  \ifthenelse{\isundefined{\notes@spemail}}{\spemail{}}{}
+  \ifthenelse{\isundefined{\notes@season}}{\season{}}{}
+  \ifthenelse{\isundefined{\notes@flag}}{\flag{}}{}
+  
   \ifthenelse{\isundefined{\notes@conference}}{\conference{}}{}
   \ifthenelse{\isundefined{\notes@place}}{\place{}}{}  
   \hypersetup{
@@ -363,7 +387,7 @@
     \ifthenelse{\equal{\notes@spemail}{}}{%
     {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}%
     }{%
-    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}\footnote{\href{mailto:\notes@spemail}{\notes@spemail} (speaker)}}%
+    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail} (speaker)}}%
     \par}}%
     \vskip 1.5em%
     {\large
@@ -371,8 +395,11 @@
       \ifthenelse{\equal{\notes@email}{}}{%
         {\small\itshape\@author}%
       }{%
+      \ifthenelse{\equal{\notes@speaker}{}}{%
+      {\small\itshape\@author}\footnote{\href{mailto:\notes@email}{\notes@email}}%
+      }{%
         {\small\itshape\@author}\footnote{\href{mailto:\notes@email}{\notes@email} (scribe)}%
-      }
+      }}%
     \end{tabular}\par}%
     \vskip 2ex%
     \ifthenelse{\equal{\notes@flag}{}}{}%
@@ -399,9 +426,16 @@
         \vskip 1ex%
       }%
     }
+    \ifthenelse{\isundefined{\season}}{
     \ifthenelse{\isundefined{\notes@dateenddef}}{%
-    {\small\itshape\displaydate{@date}}}{%
+    \ifthenelse{\isundefined{\notes@datestartdef}}{}{%
+    {\small\itshape\displaydate{@date}}%
+    }}{%
     {\small\itshape\displaydate{@date} -- \displaydate{@dateend}}}%
+    }% If season not defined
+    {% If season is defined
+    {\itshape\notes@season}%
+    }%
     \ifthenelse{\isundefined{\notes@attn}}{}{\vskip 3ex%
     {\itshape\notes@attn}%
     }%
