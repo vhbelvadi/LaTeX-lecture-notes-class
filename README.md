@@ -163,7 +163,7 @@ This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md)
 
 ### Acknowledgments
 
-Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations.
+Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations. See the [release article](http://vhbelvadi.com/latex-lecture-notes-class/) for more.
 
 ***
 
