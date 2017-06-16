@@ -22,9 +22,9 @@ The same data condensed into brief notes about working with this class, for thos
 Simply drop the `.cls` and `.sty` files into your LaTeX document tree.
 On UNIX systems this is usually `~/texmf/` and is `C:\Users\user_name\texmf\` on Windows.
 
-Although not necessary, it is highly recommended that you place these files inside their own folder with the tree `.../texmf/tex/latex/folder_name` for better package management<sup>1</sup>.
+Although not necessary, it is highly recommended that you place these files inside their own folder with the tree `.../texmf/tex/latex/folder_name` for better package management.
 
-MikTex does things differently<sup>2</sup>: `C:\Users\user_name\Appdata\Local\MikTex\###\tex\latex\local\`.
+MikTex does things differently: `C:\Users\user_name\Appdata\Local\MikTex\###\tex\latex\local\`.
 On a Mac navigate to `~/Library/texmf/` using the option key once you are in the Go menu on any Finder window.
 
 There are several resources online that can help you in greater detail when it comes to installing .cls and .sty files.
@@ -163,8 +163,3 @@ This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md)
 ### Acknowledgments
 
 Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations. See the [release article](http://vhbelvadi.com/latex-lecture-notes-class/) for more.
-
-***
-
-1. See [Stefan Kottwitz's answer on TeX SE](https://tex.stackexchange.com/a/1138) for more details.
-2. [Stefan again](https://tex.stackexchange.com/a/2066) on MikTex on TeX SE.
