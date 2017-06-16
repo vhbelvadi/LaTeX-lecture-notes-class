@@ -143,8 +143,8 @@ Either fork this project and submit a pull request or, *only in case of translat
 
 ### Known errors
 
-1. ~Not specifying a custom page header results in ugly defaults.~
-2. ~Using the `headerno` option messes up page header text dimensions.~
+1. <s>Not specifying a custom page header results in ugly defaults.</s>
+2. <s>Using the `headerno` option messes up page header text dimensions.</s>
 
 ### Improvements/roadmap
 
