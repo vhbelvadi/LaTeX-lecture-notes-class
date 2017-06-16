@@ -75,7 +75,6 @@ Also look at the [Sample.pdf](Sample/Sample.pdf) output file to see how (great) 
 The following are primary options that must compulsorily be included. Pick one from each set below:
 
 1. The **language** of your document:
-
 - `english`
 - `french`
 - `italian` (see *acknowledgements* and *the road ahead*)
@@ -91,13 +90,11 @@ The following are primary options that must compulsorily be included. Pick one f
 
 You can also include secondary options for your document. Again, pick one from each set below:
 
-1. Customise page headers as needed:
+1. Customise page headers as needed (default: current/next sections and subsections):
 - `headertitle` to display the main title/short alternative title
 - `headersection` to display the current/next section as appropriate
 - `headersubsection` to display the current/next subsection as appropriate
 - `headerno` for a blank header (footers still display page numbers)
-
-**NB** The default behaviour is to display current/next sections and subsections.
 
 2. Customise theorem numbering as needed:
 - `theoremnosection`
