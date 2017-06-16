@@ -47,6 +47,7 @@ Your documents based on this lecture class must adhere to the following blueprin
 \author{}
 \email{}
 \flag{}
+\season{}
 \date{}{}{}
 \dateend{}{}{}
 \conference{}
@@ -61,12 +62,15 @@ Your documents based on this lecture class must adhere to the following blueprin
 
 The document class `lecture` calls this class file. Options for the class are as outlined below.
 
-Most of the data such as subtitle, course code, speaker, author etc. are optional.
-These are used to set up the head of your document, headers of your pages and pdf attributes.
-(The subject data, for example, is only for the metadata of your pdf output file.)
+Only setting a title is compulsory. All other data (e.g. subtitle, course code, speaker, dates, seasons, author etc. are optional.)
+Some of these are used to set up the head of your document (e.g. season), headers of your pages (e.g. short title) and pdf attributes (e.g. subject data is only for the pdf metadata).
 
 Take a look at the [Sample.tex](Sample/Sample.tex) file for an example of how these lines are used in a source file and for details of exactly what each command does.
 Also look at the [Sample.pdf](Sample/Sample.pdf) output file to see how (great) things will look in the end.
+
+**NB** Not all commands are shown in the sample files though most are.
+
+**NB** The season command and the dates (single date or start and end dates) are mutually exclusive with the season taking precedence. You can set either Summer 2017 (season) or 24th June, 2017 (single date) or 24th June 2017--25th June 2017 (start and end dates).
 
 ### Options
 
@@ -78,6 +82,7 @@ The following are primary options that must compulsorily be included. Pick one f
 - `english`
 - `french`
 - `italian` (see *acknowledgements* and *the road ahead*)
+- `usenglish` (same as english except for the mm/dd/yyyy format)
 
 2. The **type** of your lecture notes:
 - `seminar` usually for single class/session/seminar/lecture period
@@ -128,6 +133,10 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 ### Version history
 
+(Besides any bug fixes)
+
+- 2.1 New season data added (especially for a `course` that stretches across weeks/months), US date support
+- 2.0 Blank header (`headerno`) issue solved, defaults are no longer ugly
 - 1.2 French language support
 - 1.1 Improved default headers
 - 1.0 Initial release
@@ -145,14 +154,16 @@ Either fork this project and submit a pull request or, *only in case of translat
 
 1. <s>Not specifying a custom page header results in ugly defaults.</s>
 2. <s>Using the `headerno` option messes up page header text dimensions.</s>
+3. <s>Flag text, speaker's name and e-mail are *not* optional (yikes).</s>
 
 ### Improvements/roadmap
 
 1. The `headerno` and a couple of other options with minor errors will be corrected over time.
-2. A .gitignore will be added at some point just to make it simpler to clone this repo.
-3. An option system that lets users specify if they prefer to use various packages regardless of pdfTeX support and then loads certain packages accordingly.
-4. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
-5. Package dependencies will not reduce. This type of collaboration is what LaTeX packages are for and they're free. When (and if) some package drops support we can think of bridging the code.
+2. Not having a speaker, i.e. if the author == speaker, there is no need to mention '(scribe)' in the footer.
+3. A .gitignore will be added at some point just to make it simpler to clone this repo.
+4. An option system that lets users specify if they prefer to use various packages regardless of pdfTeX support and then loads certain packages accordingly.
+5. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
+6. Package dependencies will not reduce. This type of collaboration is what LaTeX packages are for and they're free. When (and if) some package drops support we can think of bridging the code.
 
 ## End notes
 
