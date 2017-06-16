@@ -147,12 +147,13 @@ Either fork this project and submit a pull request or, *only in case of translat
 1. ~Not specifying a custom page header results in ugly defaults.~
 2. Using the `headerno` option messes up page header text dimensions.
 
-### Improvements
+### Improvements/roadmap
 
 1. The `headerno` and a couple of other options with minor errors will be corrected over time.
-2. A .gitignore will be added at some point just to make it simpler to clone this repo
-3. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
-4. Package dependencies will not reduce. This type of collaboration is what LaTeX packages are for and they're free. When (and if) some package drops support we can think of bridging the code.
+2. A .gitignore will be added at some point just to make it simpler to clone this repo.
+3. An option system that lets users specify if they prefer to use various packages regardless of pdfTeX support and then loads certain packages accordingly.
+4. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
+5. Package dependencies will not reduce. This type of collaboration is what LaTeX packages are for and they're free. When (and if) some package drops support we can think of bridging the code.
 
 ## End notes
 
