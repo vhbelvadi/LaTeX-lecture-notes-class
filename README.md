@@ -9,7 +9,7 @@
 
 **Webpage:** [http://vhbelvadi.com/latex-lecture-notes-class/](http://vhbelvadi.com/latex-lecture-notes-class)
 
-**Current release:** v2.1 <a href="https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20release-brightgreen.svg" style="vertical-align: text-bottom;margin-left: 24px;"></a>
+**Current release:** v2.2 <a href="https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20release-brightgreen.svg" style="vertical-align: text-bottom;margin-left: 24px;"></a>
 
 **Description:** A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
 A detailed article about this class can be found on [the author's website](http://vhbelvadi.com/latex-lecture-notes-class/).
@@ -126,6 +126,9 @@ There are some additional commands you can use _inside your document_, i.e. with
 2. `\separator` for use in `talk` type documents to draw a visually helpful horizontal separator line
 3. `\tosay{message}` for use in `talk` type documents to print messages inside a box to help recall important data
 4. `\margintext{message}` to make useful notes in the margin
+5. `\\` at the start of a paragraph to give it a line break and remove any indentation
+6. `\nl ` at the start of a paragraph without either a line break or an indent (note the space following the command)
+7. `\runin{}` as a handy approach to print texts in small caps (especially useful to start new sections/chapters/parts of a document)
 
 ### Dependencies
 
@@ -135,11 +138,38 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 (Besides any bug fixes)
 
-- 2.1 New season data added (especially for a `course` that stretches across weeks/months), US date support
-- 2.0 Blank header (`headerno`) issue solved, defaults are no longer ugly
-- 1.2 French language support
-- 1.1 Improved default headers
-- 1.0 Initial release
+### 2.2
+- Title data footnotes will no longer mention '(speaker)' unless the author's email is also specified
+- Added spacing around the em dash between the course code and title at the head of the document
+- Improved styling for the explicit line break character
+- Improved caption style
+- **New command** The new command `\\` provided by this class adds a new paragraph with a line break and without an indent. Use this to mark the _start_ of a new paragraph rather than the end of the previous one:
+```
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor et lectus sit amet scelerisque.
+
+\\Nam orci leo, tincidunt id convallis eu, luctus id nisi...
+```
+- **New command** The `\nl` command provided by this class adds a new paragraph without indent or a line break. Use this same as the previous command but with a space after the command itself.
+- **New command** The `\runin{}` command provided by this class adds small caps. This can be done manually but is a handy approach that is especially useful to start new sections/chapters/parts of a document.
+
+#### 2.1
+- All options except title are now optional
+- New season data added (especially for a `course` that stretches across weeks/months)
+- Support for the US date format mm/dd/yyyy
+- French translation improvements
+
+#### 2.0
+- Blank header (`headerno`) bug fixed
+- Improved default headers
+
+#### 1.2
+- French language support
+
+#### 1.1
+- Improved default headers
+
+#### 1.0
+- Initial release
 
 ## The road ahead
 
