@@ -6,13 +6,16 @@
 \newcommand{\phb}{{}_\blacktriangle}
 \newcommand{\phc}{\blacktriangle}
 
-\newcommand{\dotleq}{\mathrel{\raisebox{1.2ex}{$⋅$}\mkern-13.5mu \leq}}
+\newcommand{\dotleq}{\mathrel{\raisebox{1.2ex}{$â$}\mkern-13.5mu \leq}}
 \renewcommand{\projlim}{\varprojlim}
 \renewcommand{\injlim}{\varinjlim}
 \newcommand{\dottimes}{\stackrel[\cdot]{\times}}
 
 %\newcommand{\xra}[1]{\xrightarrow{#1}}
 \newcommand{\xra}[1]{\, \tikz[baseline] \draw (0pt,3.5pt) -- (7pt,3.5pt); {\raisebox{1.5pt}{\ensuremath{\scriptstyle #1}}} \tikz[baseline] \draw [->] (0pt,3.5pt) -- (7pt,3.5pt); \, }
+
+\let\tempCaption=\caption
+\renewcommand{\caption}[1]{\itshape \tempCaption{#1}}
 
 \renewcommand{\obar}[1]{\overline{#1}}
 \newcommand{\ubar}[1]{\underline{#1}}
@@ -92,4 +95,3 @@
 %%%%%%%%%%%%%%%%%%%% LETTERS %%%%%%%%%%%%%%%%%%%%
 \newcommand{\frakM}{\mathfrak{M}}
 \newcommand{\frakm}{\mathfrak{m}}
-
