@@ -284,7 +284,11 @@
 \setlength{\abovedisplayskip}{2ex}%
 \setlength{\abovedisplayshortskip}{0ex}%
 \setlength{\belowdisplayskip}{2ex}%
-\setlength{\belowdisplayshortskip}{0ex}%
+\setlength{\belowdisplayshortskip}{2ex}%
+% Redefine line break command, add newline and begin commands
+\renewcommand{\\}{\par\vskip1.5ex\noindent}%
+\newcommand{\nl}{\par\noindent}%
+\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
 % Setting up the two-column talk style
   \ifthenelse{\equal{\notes@columns}{twocolumn}}
              {%
@@ -377,7 +381,7 @@
   \begin{center}%
     \let \footnote \thanks
     \ifthenelse{\isundefined{\notes@ccode}}{}{%
-    \protect\textls[100]{\protect\MakeUppercase{\notes@ccode}}---%
+    \protect\textls[100]{\protect\MakeUppercase{\notes@ccode}} --- %
     }%
     {\large\smallcaps\protect\textls[100]{\protect\MakeUppercase{\@title}}}%
     \ifthenelse{\isundefined{\notes@subtitle}}{}{%
@@ -387,7 +391,11 @@
     \ifthenelse{\equal{\notes@spemail}{}}{%
     {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}%
     }{%
-    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail} (speaker)}}%
+    \ifthenelse{\equal{\notes@email}{}}{%
+      {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail}}%
+      }{%
+    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail} (speaker)}%
+    }}%
     \par}}%
     \vskip 1.5em%
     {\large
@@ -426,13 +434,13 @@
         \vskip 1ex%
       }%
     }
-    \ifthenelse{\isundefined{\season}}{
+    \ifthenelse{\isundefined{\season}}{% If season not defined
     \ifthenelse{\isundefined{\notes@dateenddef}}{%
     \ifthenelse{\isundefined{\notes@datestartdef}}{}{%
     {\small\itshape\displaydate{@date}}%
     }}{%
     {\small\itshape\displaydate{@date} -- \displaydate{@dateend}}}%
-    }% If season not defined
+    }
     {% If season is defined
     {\itshape\notes@season}%
     }%
