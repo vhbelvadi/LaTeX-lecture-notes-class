@@ -143,12 +143,12 @@ There are some additional commands you can use _inside your document_, i.e. with
 - Added spacing around the em dash between the course code and title at the head of the document
 - Improved styling for the explicit line break character
 - Improved caption style
-- **New command** The new command `\\` provided by this class adds a new paragraph with a line break and without an indent. Use this to mark the _start_ of a new paragraph rather than the end of the previous one:
-```
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor et lectus sit amet scelerisque.
+- **New command** The `\\` command provided by this class adds a new paragraph with a line break and without an indent. Use this to mark the _start_ of a new paragraph rather than the end of the previous one:
+<pre>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor et lectus.
 
 \\Nam orci leo, tincidunt id convallis eu, luctus id nisi...
-```
+</pre>
 - **New command** The `\nl` command provided by this class adds a new paragraph without indent or a line break. Use this same as the previous command but with a space after the command itself.
 - **New command** The `\runin{}` command provided by this class adds small caps. This can be done manually but is a handy approach that is especially useful to start new sections/chapters/parts of a document.
 
