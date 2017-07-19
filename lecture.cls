@@ -21,7 +21,8 @@
   \newcommand{\notes@problemname}{problem}
   \newcommand{\notes@conjecturename}{conjecture}
   \newcommand{\notes@claimname}{claim}
-  \newcommand{\notes@notationname}{notation}}
+  \newcommand{\notes@notationname}{notation}
+  \newcommand{\notes@morelinkname}{For more visit}}
   \DeclareOption{usenglish}{
   \newcommand{\notes@lang}{english}
   \newdateformat{usvardate}{\monthname[\THEMONTH] \ordinal{DAY}, \THEYEAR}
@@ -39,7 +40,8 @@
   \newcommand{\notes@problemname}{problem}
   \newcommand{\notes@conjecturename}{conjecture}
   \newcommand{\notes@claimname}{claim}
-  \newcommand{\notes@notationname}{notation}}
+  \newcommand{\notes@notationname}{notation}
+  \newcommand{\notes@morelinkname}{For more visit}}
 \DeclareOption{italian}{
   \newcommand{\notes@lang}{italian}
   \dateitalian
@@ -56,8 +58,8 @@
   \newcommand{\notes@problemname}{problema}
   \newcommand{\notes@conjecturename}{congettura}
   \newcommand{\notes@claimname}{ipotesi}
-  \newcommand{\notes@notationname}{notazione}}
-  
+  \newcommand{\notes@notationname}{notazione}
+  \newcommand{\notes@morelinkname}{Per ulteriori informazioni visita}}
   \DeclareOption{french}{
   \newcommand{\notes@lang}{french}
   \datefrench
@@ -74,7 +76,8 @@
   \newcommand{\notes@problemname}{probl\`{e}me}
   \newcommand{\notes@conjecturename}{conjecture}
   \newcommand{\notes@claimname}{d\'{e}claration}
-  \newcommand{\notes@notationname}{notation}}
+  \newcommand{\notes@notationname}{notation}
+  \newcommand{\notes@morelinkname}{Pour plus d'informations visitez}}
   
 % Header (headertitle,headersection,headersubsection, headerno)
 %   headertitle displays speaker on left and title on right.
@@ -161,7 +164,7 @@
 \usetikzlibrary{shapes}
 \RequirePackage[utf8x]{inputenc}
 \RequirePackage[intlimits]{amsmath}
-%\RequirePackage[osf,sc]{mathpazo} % Uncomment for Palatino and comment out the next line
+% \RequirePackage[osf,sc]{mathpazo} % Uncomment for Palatino and comment out the next line
 \RequirePackage[frenchstyle,widermath,narrowiints,fullsumlimits,fullintlimits]{kpfonts} % Comment out and uncomment the previous line for Palatino
 \linespread{1.05}
 \RequirePackage{amsfonts}
@@ -253,7 +256,7 @@
 \renewcommand{\cftsecpagefont}{\normalfont}%
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-\ifthenelse{\equal{\notes@type}{seminar}}{\renewcommand{\thesubsection}{\arabic{subsection}}}{}  
+%\ifthenelse{\equal{\notes@type}{seminar}}{\renewcommand{\thesubsection}{\arabic{subsection}}}{}  
 \ifthenelse{\equal{\notes@type}{talk}}{\renewcommand{\thesubsection}{\arabic{subsection}}}{}  
 
 \renewcommand{\descriptionlabel}[1]{\hspace*{\labelsep}\smallcaps{#1}}
@@ -274,6 +277,7 @@
 \newcommand{\conference}[1]{\newcommand{\notes@conference}{#1}}
 \newcommand{\subject}[1]{\newcommand{\notes@subject}{#1}}
 \newcommand{\attn}[1]{\newcommand{\notes@attn}{#1}}
+\newcommand{\morelink}[1]{\newcommand{\notes@morelink}{#1}}
 
 \AtBeginDocument{%
 % Better spacing for the equation environment
@@ -345,9 +349,10 @@
   \ifthenelse{\isundefined{\notes@spemail}}{\spemail{}}{}
   \ifthenelse{\isundefined{\notes@season}}{\season{}}{}
   \ifthenelse{\isundefined{\notes@flag}}{\flag{}}{}
-  
+  %\ifthenelse{\isundefined{\notes@morelink}}{\morelink{}}{}
   \ifthenelse{\isundefined{\notes@conference}}{\conference{}}{}
   \ifthenelse{\isundefined{\notes@place}}{\place{}}{}  
+  
   \hypersetup{
     pdftitle={\@title},
     pdfsubject={\notes@subject},
@@ -446,6 +451,13 @@
     }%
     \ifthenelse{\isundefined{\notes@attn}}{}{\vskip 3ex%
     {\itshape\notes@attn}%
+    }%
+    \ifthenelse{\isundefined{\notes@morelink}}{}{%
+    \let\thefootnote\relax%
+    \footnotetext{%
+    \notes@morelinkname \ \url{\notes@morelink}.
+    }%
+    \addtocounter{footnote}{-1}\let\thefootnote\svthefootnote%
     }%
     \vskip 3ex\noindent\rule{1.5cm}{0.4pt}%
   \end{center}%
