@@ -53,6 +53,7 @@ Your documents based on this lecture class must adhere to the following blueprin
 \conference{}
 \place{}
 \attn{}
+\morelink{}
 
 \begin{document}
 \end{document}
@@ -129,6 +130,7 @@ There are some additional commands you can use _inside your document_, i.e. with
 5. `\\` at the start of a paragraph to give it a line break and remove any indentation
 6. `\nl ` at the start of a paragraph without either a line break or an indent (note the space following the command)
 7. `\runin{}` as a handy approach to print texts in small caps (especially useful to start new sections/chapters/parts of a document)
+8. `\morelink{}` to add a _For more visit `_______`._ link in the footer of the first page.
 
 ### Dependencies
 
@@ -138,7 +140,11 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 (Besides any bug fixes)
 
-### 2.2
+### 2.3
+- A new command to add a more link in the footer of the first page
+- Both `course` and `seminar` type documents now support up to subsections. (Because of their nature `talk` type documents do not support such layering.)
+
+#### 2.2
 - Title data footnotes will no longer mention '(speaker)' unless the author's email is also specified
 - Added spacing around the em dash between the course code and title at the head of the document
 - Improved styling for the explicit line break character
@@ -188,8 +194,8 @@ Either fork this project and submit a pull request or, *only in case of translat
 
 ### Improvements/roadmap
 
-1. The `headerno` and a couple of other options with minor errors will be corrected over time.
-2. Not having a speaker, i.e. if the author == speaker, there is no need to mention '(scribe)' in the footer.
+1. <s>The `headerno` and a couple of other options with minor errors will be corrected over time.</s>
+2. <s>Not having a speaker, i.e. if the author == speaker, there is no need to mention '(scribe)' in the footer.</s>
 3. A .gitignore will be added at some point just to make it simpler to clone this repo.
 4. An option system that lets users specify if they prefer to use various packages regardless of pdfTeX support and then loads certain packages accordingly.
 5. Errors that crop up from time to time will be set right (since I use this class myself to teach at University) and this will go on so long as I keep using it.
