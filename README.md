@@ -138,9 +138,10 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 ### Version history
 
-(Besides any bug fixes)
+### 2.3.1
+- Fixed a major bug that would prevent compilation while using `english` as the language option.
 
-### 2.3
+#### 2.3
 - A new command to add a more link in the footer of the first page
 - Both `course` and `seminar` type documents now support up to subsections. (Because of their nature `talk` type documents do not support such layering.)
 
