@@ -156,7 +156,7 @@
 
 %%% Common macroes
 \RequirePackage[\notes@lang]{babel}
-\RequirePackage[pdftex,colorlinks,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
+\RequirePackage[colorlinks,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
 \RequirePackage{fancyhdr}
 \RequirePackage{tikz}
 \usetikzlibrary{arrows}
@@ -188,7 +188,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \RequirePackage[fixlanguage]{babelbib}
-\RequirePackage{Commons}
+\RequirePackage{commons}
 \RequirePackage{csquotes}
 \addtolength{\jot}{0.5em} %Add row spacing to align environment
 \RequirePackage[verbose,a4paper,top=1.45in,bottom=1.35in,left=1.15in,right=2in,asymmetric,twoside]{geometry}
