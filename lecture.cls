@@ -2,8 +2,6 @@
 \ProvidesClass{lecture}
 \RequirePackage{ifthen}
 \RequirePackage[nodayofweek]{datetime}
-% For russian
-\RequirePackage[T1,T2A]{fontenc}
 
 %%% Options
 % Language (english,italian)
@@ -26,7 +24,8 @@
   \newcommand{\notes@claimname}{claim}
   \newcommand{\notes@notationname}{notation}
   \newcommand{\notes@morelinkname}{For more visit}}
-  \DeclareOption{usenglish}{
+  %
+\DeclareOption{usenglish}{
   \newcommand{\notes@lang}{english}
   \newdateformat{usvardate}{\monthname[\THEMONTH] \ordinal{DAY}, \THEYEAR}
   \usvardate
@@ -45,6 +44,7 @@
   \newcommand{\notes@claimname}{claim}
   \newcommand{\notes@notationname}{notation}
   \newcommand{\notes@morelinkname}{For more visit}}
+  %
 \DeclareOption{italian}{
   \newcommand{\notes@lang}{italian}
   \dateitalian
@@ -63,7 +63,8 @@
   \newcommand{\notes@claimname}{ipotesi}
   \newcommand{\notes@notationname}{notazione}
   \newcommand{\notes@morelinkname}{Per ulteriori informazioni visita}}
-  \DeclareOption{french}{
+  %
+\DeclareOption{french}{
   \newcommand{\notes@lang}{french}
   \datefrench
   \newcommand{\notes@lecturename}{Conf\'{e}rence}
@@ -81,7 +82,7 @@
   \newcommand{\notes@claimname}{d\'{e}claration}
   \newcommand{\notes@notationname}{notation}
   \newcommand{\notes@morelinkname}{Pour plus d'informations visitez}}
-  
+  %
 \DeclareOption{russian}{
 	\newcommand{\notes@lang}{russian}
 	\newcommand{\notes@lecturename}{Лекция}
@@ -100,6 +101,7 @@
 	\newcommand{\notes@notationname}{Обозначение}
 	\newcommand{\notes@morelinkname}{Подробности здесь}}
 
+%
 % Header (headertitle,headersection,headersubsection, headerno)
 %   headertitle displays speaker on left and title on right.
 %   headersection displays section on left and right
@@ -184,6 +186,7 @@
 \usetikzlibrary{shapes}
 \RequirePackage[utf8x]{inputenc}
 \RequirePackage[intlimits]{amsmath}
+\ifthenelse{\equal{\notes@lang}{russian}}{\RequirePackage[T1,T2A]{fontenc}}{} % Required for Cyrillic support
 % \RequirePackage[osf,sc]{mathpazo} % Uncomment for Palatino and comment out the next line
 \RequirePackage[frenchstyle,widermath,narrowiints,fullsumlimits,fullintlimits]{kpfonts} % Comment out and uncomment the previous line for Palatino
 \linespread{1.05}
