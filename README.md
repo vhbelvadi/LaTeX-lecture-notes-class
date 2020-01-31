@@ -199,6 +199,7 @@ Either fork this project and submit a pull request or, *only in case of translat
 1. <s>Not specifying a custom page header results in ugly defaults.</s>
 2. <s>Using the `headerno` option messes up page header text dimensions.</s>
 3. <s>Flag text, speaker's name and e-mail are *not* optional (yikes).</s>
+4. The `\lecture[duration]{dd}{mm}{yyyy}` command does not work for the `russian` language option. However, `\margintext{message}` can be used instead to achieve a similar output.
 
 ### Improvements/roadmap
 
