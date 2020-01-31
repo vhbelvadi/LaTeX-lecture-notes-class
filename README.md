@@ -84,6 +84,7 @@ The following are primary options that must compulsorily be included. Pick one f
 - `french`
 - `italian` (see *acknowledgements* and *the road ahead*)
 - `usenglish` (same as english except for the mm/dd/yyyy format)
+- `russian` (this automatically loads Cyrillic support)
 
 2. The **type** of your lecture notes:
 - `seminar` usually for single class/session/seminar/lecture period
@@ -138,7 +139,13 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 ### Version history
 
-### 2.3.1
+### 2.4
+**NB** This version may introduce a breaking change if you use the `\Proj` command. Use `\Projection` instead.
+- Russian translations courtesy of Aleksei Kozharin.
+- `\Proj` command changed to `\Projection` to prevent conflict with Russian Babel.
+- Fontenc T1, T2A support (being loaded conditionally only when the document language is  russian ).
+
+#### 2.3.1
 - Fixed a major bug that would prevent compilation while using `english` as the language option.
 
 #### 2.3
@@ -185,7 +192,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur porttitor et 
 1. Translations are welcome and appreciated.
 2. General suggestions for improvement are welcome as well.
 
-Either fork this project and submit a pull request or, *only in case of translations*, <a href="mailto:user@example.com">drop me an e-mail</a> with the relavant translations and specify how you wish to be credited.
+Either fork this project and submit a pull request or, *only in case of translations*, <a href="mailto:hello@vhbelvadi.com">drop me an e-mail</a> with the relavant translations and specify how you wish to be credited.
 
 ### Known errors
 
@@ -210,6 +217,6 @@ This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md)
 
 ### Acknowledgments
 
-Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations.
+Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations. Thanks to [Aleksei Kozharin](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/2/commits/34301290ff554b446fc755fa4cc813b701f63a2c) for Russian translations.
 
 See the [release article](http://vhbelvadi.com/latex-lecture-notes-class/) for more.
