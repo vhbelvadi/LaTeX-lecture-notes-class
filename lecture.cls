@@ -2,6 +2,8 @@
 \ProvidesClass{lecture}
 \RequirePackage{ifthen}
 \RequirePackage[nodayofweek]{datetime}
+% For russian
+\RequirePackage[T1,T2A]{fontenc}
 
 %%% Options
 % Language (english,italian)
@@ -80,6 +82,24 @@
   \newcommand{\notes@notationname}{notation}
   \newcommand{\notes@morelinkname}{Pour plus d'informations visitez}}
   
+\DeclareOption{russian}{
+	\newcommand{\notes@lang}{russian}
+	\newcommand{\notes@lecturename}{Лекция}
+	\newcommand{\notes@theoremname}{Теорема}
+	\newcommand{\notes@propositionname}{Предложение}
+	\newcommand{\notes@lemmaname}{Лемма}
+	\newcommand{\notes@corollaryname}{Следствие}
+	\newcommand{\notes@definitionname}{Определение}
+	\newcommand{\notes@examplename}{Пример}
+	\newcommand{\notes@exercisename}{Упражнение}
+	\newcommand{\notes@remarkname}{Замечание}
+	\newcommand{\notes@factname}{Факт}
+	\newcommand{\notes@problemname}{Задача}
+	\newcommand{\notes@conjecturename}{Догадка}
+	\newcommand{\notes@claimname}{Утверждение}
+	\newcommand{\notes@notationname}{Обозначение}
+	\newcommand{\notes@morelinkname}{Подробности здесь}}
+
 % Header (headertitle,headersection,headersubsection, headerno)
 %   headertitle displays speaker on left and title on right.
 %   headersection displays section on left and right
