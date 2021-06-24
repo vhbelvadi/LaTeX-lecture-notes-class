@@ -313,7 +313,7 @@
 \setlength{\belowdisplayskip}{2ex}%
 \setlength{\belowdisplayshortskip}{2ex}%
 % Redefine line break command, add newline and begin commands
-\renewcommand{\\}{\par\vskip1.5ex\noindent}%
+\renewcommand{\\}{\par\vspace{1.5ex}\noindent}%
 \newcommand{\nl}{\par\noindent}%
 \newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
 % Setting up the two-column talk style
