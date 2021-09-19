@@ -64,6 +64,24 @@
   \newcommand{\notes@notationname}{notazione}
   \newcommand{\notes@morelinkname}{Per ulteriori informazioni visita}}
   %
+\DeclareOption{german}{
+  \newcommand{\notes@lang}{german}
+  \newcommand{\notes@lecturename}{Vorlesung}
+  \newcommand{\notes@theoremname}{Theorem}
+  \newcommand{\notes@propositionname}{Proposition}
+  \newcommand{\notes@lemmaname}{Lemma}
+  \newcommand{\notes@corollaryname}{Korollar}
+  \newcommand{\notes@definitionname}{Definition}
+  \newcommand{\notes@examplename}{Beispiel}
+  \newcommand{\notes@exercisename}{\"Ubung}
+  \newcommand{\notes@remarkname}{Bemerkung}
+  \newcommand{\notes@factname}{Fakt}
+  \newcommand{\notes@problemname}{Problem}
+  \newcommand{\notes@conjecturename}{Vermutung}
+  \newcommand{\notes@claimname}{Behauptung}
+  \newcommand{\notes@notationname}{Notation}
+  \newcommand{\notes@morelinkname}{F\"ur mehr Information siehe}}
+  %
 \DeclareOption{french}{
   \newcommand{\notes@lang}{french}
   \datefrench
