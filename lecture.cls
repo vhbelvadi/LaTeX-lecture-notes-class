@@ -4,11 +4,11 @@
 \RequirePackage[nodayofweek]{datetime}
 
 %%% Options
-% Language (english,italian)
+% Language (english, usenglish, italian, french, russian, swedish)
 \DeclareOption{english}{
   \newcommand{\notes@lang}{english}
-\newdateformat{gbdate}{\ordinal{DAY} \monthname[\THEMONTH] \THEYEAR}
-\gbdate
+  \newdateformat{gbdate}{\ordinal{DAY} \monthname[\THEMONTH] \THEYEAR}
+  \gbdate
   \newcommand{\notes@lecturename}{Lecture}
   \newcommand{\notes@theoremname}{theorem}
   \newcommand{\notes@propositionname}{proposition}
@@ -84,23 +84,40 @@
   \newcommand{\notes@morelinkname}{Pour plus d'informations visitez}}
   %
 \DeclareOption{russian}{
-	\newcommand{\notes@lang}{russian}
-	\newcommand{\notes@lecturename}{Лекция}
-	\newcommand{\notes@theoremname}{Теорема}
-	\newcommand{\notes@propositionname}{Предложение}
-	\newcommand{\notes@lemmaname}{Лемма}
-	\newcommand{\notes@corollaryname}{Следствие}
-	\newcommand{\notes@definitionname}{Определение}
-	\newcommand{\notes@examplename}{Пример}
-	\newcommand{\notes@exercisename}{Упражнение}
-	\newcommand{\notes@remarkname}{Замечание}
-	\newcommand{\notes@factname}{Факт}
-	\newcommand{\notes@problemname}{Задача}
-	\newcommand{\notes@conjecturename}{Догадка}
-	\newcommand{\notes@claimname}{Утверждение}
-	\newcommand{\notes@notationname}{Обозначение}
-	\newcommand{\notes@morelinkname}{Подробности здесь}}
-
+  \newcommand{\notes@lang}{russian}
+  \newcommand{\notes@lecturename}{Лекция}
+  \newcommand{\notes@theoremname}{Теорема}
+  \newcommand{\notes@propositionname}{Предложение}
+  \newcommand{\notes@lemmaname}{Лемма}
+  \newcommand{\notes@corollaryname}{Следствие}
+  \newcommand{\notes@definitionname}{Определение}
+  \newcommand{\notes@examplename}{Пример}
+  \newcommand{\notes@exercisename}{Упражнение}
+  \newcommand{\notes@remarkname}{Замечание}
+  \newcommand{\notes@factname}{Факт}
+  \newcommand{\notes@problemname}{Задача}
+  \newcommand{\notes@conjecturename}{Догадка}
+  \newcommand{\notes@claimname}{Утверждение}
+  \newcommand{\notes@notationname}{Обозначение}
+  \newcommand{\notes@morelinkname}{Подробности здесь}}
+  %
+\DeclareOption{swedish}{
+  \newcommand{\notes@lang}{swedish}
+  \newcommand{\notes@lecturename}{F\"{o}reläsning}
+  \newcommand{\notes@theoremname}{teorem}
+  \newcommand{\notes@propositionname}{sats}
+  \newcommand{\notes@lemmaname}{lemma}
+  \newcommand{\notes@corollaryname}{korollarium}
+  \newcommand{\notes@definitionname}{definition}
+  \newcommand{\notes@examplename}{exempel}
+  \newcommand{\notes@exercisename}{\"{o}vning}
+  \newcommand{\notes@remarkname}{anm\"{a}rkning}
+  \newcommand{\notes@factname}{faktum}
+  \newcommand{\notes@problemname}{uppgift}
+  \newcommand{\notes@conjecturename}{konjektur}
+  \newcommand{\notes@claimname}{p\r{a}st\r{a}ende}
+  \newcommand{\notes@notationname}{notation}
+  \newcommand{\notes@morelinkname}{F\"{o}r mer information bes\"{o}k}}
 %
 % Header (headertitle,headersection,headersubsection, headerno)
 %   headertitle displays speaker on left and title on right.
@@ -279,8 +296,8 @@
 \renewcommand{\cftsecpagefont}{\normalfont}%
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
-%\ifthenelse{\equal{\notes@type}{seminar}}{\renewcommand{\thesubsection}{\arabic{subsection}}}{}  
-\ifthenelse{\equal{\notes@type}{talk}}{\renewcommand{\thesubsection}{\arabic{subsection}}}{}  
+%\ifthenelse{\equal{\notes@type}{seminar}}{\renewcommand{\thesubsection}{\arabic{subsection}}}{}
+\ifthenelse{\equal{\notes@type}{talk}}{\renewcommand{\thesubsection}{\arabic{subsection}}}{}
 
 \renewcommand{\descriptionlabel}[1]{\hspace*{\labelsep}\smallcaps{#1}}
 
@@ -374,8 +391,8 @@
   \ifthenelse{\isundefined{\notes@flag}}{\flag{}}{}
   %\ifthenelse{\isundefined{\notes@morelink}}{\morelink{}}{}
   \ifthenelse{\isundefined{\notes@conference}}{\conference{}}{}
-  \ifthenelse{\isundefined{\notes@place}}{\place{}}{}  
-  
+  \ifthenelse{\isundefined{\notes@place}}{\place{}}{}
+
   \hypersetup{
     pdftitle={\@title},
     pdfsubject={\notes@subject},
