@@ -85,6 +85,7 @@ The following are primary options that must compulsorily be included. Pick one f
 - `italian` (see *acknowledgements* and *the road ahead*)
 - `usenglish` (same as english except for the mm/dd/yyyy format)
 - `russian` (this automatically loads Cyrillic support)
+- `swedish`
 
 2. The **type** of your lecture notes:
 - `seminar` usually for single class/session/seminar/lecture period

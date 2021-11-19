@@ -1,0 +1,12 @@
+# Ignore everything in directory
+/*
+
+# except ..
+!.gitignore
+!Sample/
+!commons.sty
+!lecture.cls
+!Icon
+!_config.yml
+!LICENSE
+!README.md
