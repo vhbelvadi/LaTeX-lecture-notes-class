@@ -85,6 +85,7 @@ The following are primary options that must compulsorily be included. Pick one f
 - `italian` (see *acknowledgements* and *the road ahead*)
 - `usenglish` (same as english except for the mm/dd/yyyy format)
 - `russian` (this automatically loads Cyrillic support)
+- `german`
 - `swedish`
 
 2. The **type** of your lecture notes:
@@ -140,7 +141,11 @@ There are some additional commands you can use _inside your document_, i.e. with
 
 ### Version history
 
-### 2.4
+### 2.5
+- German translations courtesy of Jan Heilund.
+- Swedish translations courtesy of @eastlunder.
+
+#### 2.4
 **NB** This version may introduce a breaking change if you use the `\Proj` command. Use `\Projection` instead.
 - Russian translations courtesy of Aleksei Kozharin.
 - `\Proj` command changed to `\Projection` to prevent conflict with Russian Babel.
@@ -219,6 +224,6 @@ This project is licensed under the MIT License. See the [LICENSE.md](LICENSE.md)
 
 ### Acknowledgments
 
-Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations. Thanks to [Aleksei Kozharin](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/2/commits/34301290ff554b446fc755fa4cc813b701f63a2c) for Russian translations.
+Thanks to [Stefano Maggiolo](http://blog.poormansmath.net/) for initially helping me kickstart this and for his Italian translations. Thanks to [Aleksei Kozharin](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/2/commits/34301290ff554b446fc755fa4cc813b701f63a2c) for Russian translations, [Jan Heilund](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/6) for German translations and [@eastlunder](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/7) for Swedish translations.
 
 See the [release article](http://vhbelvadi.com/latex-lecture-notes-class/) for more.
