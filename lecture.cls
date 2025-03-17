@@ -406,7 +406,7 @@
   \ifthenelse{\isundefined{\notes@speaker}}{\speaker{}}{}
   \ifthenelse{\isundefined{\notes@speaker}}{\speaker{}}{}
   \ifthenelse{\isundefined{\notes@spemail}}{\spemail{}}{}
-  \ifthenelse{\isundefined{\notes@season}}{\season{}}{}
+  %\ifthenelse{\isundefined{\notes@season}}{\season{}}{}% Uncommented to fix Issue #8
   \ifthenelse{\isundefined{\notes@flag}}{\flag{}}{}
   %\ifthenelse{\isundefined{\notes@morelink}}{\morelink{}}{}
   \ifthenelse{\isundefined{\notes@conference}}{\conference{}}{}
@@ -498,13 +498,15 @@
         \vskip 1ex%
       }%
     }
-    \ifthenelse{\isundefined{\season}}{% If season not defined
-    \ifthenelse{\isundefined{\notes@dateenddef}}{%
-    \ifthenelse{\isundefined{\notes@datestartdef}}{}{%
-    {\small\itshape\displaydate{@date}}%
-    }}{%
-    {\small\itshape\displaydate{@date} -- \displaydate{@dateend}}}%
-    }
+    \ifthenelse{\isundefined{\notes@season}}{% If season not defined
+      \ifthenelse{\isundefined{\notes@dateenddef}}{% If end date not defined
+        \ifthenelse{\isundefined{\notes@datestartdef}}{}{% If start date not defined do nothing else
+          {\small\itshape\displaydate{@date}}% Display start date
+        }%
+      }{%
+        {\small\itshape\displaydate{@date} -- \displaydate{@dateend}}% Do this if end date and start date are defined
+      }%
+    }%
     {% If season is defined
     {\itshape\notes@season}%
     }%
