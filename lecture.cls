@@ -219,16 +219,14 @@
 \usetikzlibrary{arrows}
 \usetikzlibrary{patterns}
 \usetikzlibrary{shapes}
-\RequirePackage[utf8x]{inputenc}
+% \RequirePackage[utf8]{inputenc} % Removed as pdflatex is no longer recommended for this package, use lualatex instead
 \RequirePackage[intlimits]{amsmath}
-\ifthenelse{\equal{\notes@lang}{russian}}{\RequirePackage[T1,T2A]{fontenc}}{} % Required for Cyrillic support
-% \RequirePackage[osf,sc]{mathpazo} % Uncomment for Palatino and comment out the next line
-\RequirePackage[frenchstyle,widermath,narrowiints,fullsumlimits,fullintlimits]{kpfonts} % Comment out and uncomment the previous line for Palatino
-\linespread{1.05}
+% \ifthenelse{\equal{\notes@lang}{russian}}{\RequirePackage[T1,T2A]{fontenc}}{} % Required for Cyrillic support % Removed for LuaLaTeX support, not required per Lua docs
 \RequirePackage{amsfonts}
-\RequirePackage{amsthm}
 \RequirePackage{amsxtra}
 \RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{unicode-math}
 \RequirePackage{mathdots}
 \RequirePackage{mathrsfs}
 \RequirePackage{microtype}
@@ -249,6 +247,8 @@
 \RequirePackage{Commons}
 \RequirePackage{csquotes}
 \addtolength{\jot}{0.5em} %Add row spacing to align environment
+\RequirePackage[frenchstyle,narrowiints,largesmallcaps]{kpfonts-otf} % Comment out and uncomment the line two above for Palatino % fullsumlimits,fullintlimits not supported by kpfonts-otf
+\linespread{1.05}
 \RequirePackage[verbose,a4paper,top=1.45in,bottom=1.35in,left=1.15in,right=2in,asymmetric,twoside]{geometry}
 \setlength\headheight{14pt}
 
@@ -308,7 +308,7 @@
 \titleformat{\subsubsection}{\relax\centering}{\thesubsubsection}{1em}{\normalsize}
 \titleformat{\paragraph}[runin]{}{}{}{\normalsize\smallcaps}
 \PassOptionsToPackage{letterspace=1000}{microtype}
-\titleformat{\section}{\relax\centering\large\lsstyle}{\small{\thesection}}{0.5em}{\otherscshape\MakeLowercase}
+\titleformat{\section}{\relax\centering\large\lsstyle}{\small{\thesection}}{0.5em}{\scshape\MakeLowercase}
 \PassOptionsToPackage{letterspace=0}{microtype}
 
 \renewcommand{\cftsecfont}{\normalfont}%
@@ -351,7 +351,7 @@
 % Redefine line break command, add newline and begin commands
 \renewcommand{\\}{\par\vspace{1.5ex}\noindent}%
 \newcommand{\nl}{\par\noindent}%
-\newcommand{\runin}[1]{\textls[50]{\otherscshape #1}}
+\newcommand{\runin}[1]{\textls[50]{\scshape #1}}
 % Setting up the two-column talk style
   \ifthenelse{\equal{\notes@columns}{twocolumn}}
              {%
@@ -406,19 +406,19 @@
   \ifthenelse{\isundefined{\notes@speaker}}{\speaker{}}{}
   \ifthenelse{\isundefined{\notes@speaker}}{\speaker{}}{}
   \ifthenelse{\isundefined{\notes@spemail}}{\spemail{}}{}
-  %\ifthenelse{\isundefined{\notes@season}}{\season{}}{}% Uncommented to fix Issue #8
+  %\ifthenelse{\isundefined{\notes@season}}{\season{}}{} % Commented to fix Issue #8
   \ifthenelse{\isundefined{\notes@flag}}{\flag{}}{}
   %\ifthenelse{\isundefined{\notes@morelink}}{\morelink{}}{}
   \ifthenelse{\isundefined{\notes@conference}}{\conference{}}{}
   \ifthenelse{\isundefined{\notes@place}}{\place{}}{}
 
-  \hypersetup{
-    pdftitle={\@title},
-    pdfsubject={\notes@subject},
-    pdfauthor={\@author},
-    pdfkeywords={\notes@speaker{}:\notes@conference{}:\notes@place{}},
-  }
-  \pdfinfo{/ModDate (D:\pdfdate)}
+  % \hypersetup{
+  %   pdftitle={\@title},
+  %   pdfsubject={\notes@subject},
+  %   pdfauthor={\@author},
+  %   pdfkeywords={\notes@speaker{}:\notes@conference{}:\notes@place{}},
+  % }
+  % \pdfinfo{/ModDate (D:\pdfdate)}
   \maketitle
   \ifthenelse{\equal{\notes@type}{course}}{\tableofcontents}{}
 }
@@ -449,16 +449,16 @@
     }%
     {\large\smallcaps\protect\textls[100]{\protect\MakeUppercase{\@title}}}%
     \ifthenelse{\isundefined{\notes@subtitle}}{}{%
-    {\vskip 1.5ex\large\smallcaps\protect\textls[100]{\protect\MakeLowercase{\protect\otherscshape{\notes@subtitle}}}}%
+    {\vskip 1.5ex\large\smallcaps\protect\textls[100]{\protect\MakeLowercase{\protect\scshape{\notes@subtitle}}}}%
     }%
     {\ifthenelse{\isundefined{\notes@speaker}}{}{%
     \ifthenelse{\equal{\notes@spemail}{}}{%
-    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}%
+    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\scshape{\notes@speaker}}}}%
     }{%
     \ifthenelse{\equal{\notes@email}{}}{%
-      {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail}}%
+      {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\scshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail}}%
       }{%
-    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\otherscshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail} (speaker)}%
+    {\vskip 1.5ex\normalsize\protect\MakeLowercase{\smallcaps\protect\textls[75]{\protect\scshape{\notes@speaker}}}}\footnote{\protect\href{mailto:\notes@spemail}{\notes@spemail} (speaker)}%
     }}%
     \par}}%
     \vskip 1.5em%
