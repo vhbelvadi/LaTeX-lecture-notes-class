@@ -4,11 +4,9 @@
 
 # except ..
 !.gitignore
-!Sample/
-!lecturenotes-styles.sty
+!sample/
 !lecturenotes.cls
 !Icon
-!_config.yml
 !LICENSE
 !README.md
 !doc/
