@@ -1,0 +1,9 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Example section}{1}{section.1}%
+\contentsline {section}{\numberline {2}Another section by itself}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}This is a subsection by itself}{3}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Yet another section}{3}{section.3}%
+\contentsline {subsection}{\numberline {3.1}And a subsection beneath it}{3}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}And now a subsection}{4}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}With a subsubsection following it}{4}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}This subsubsection is all by itself}{5}{subsubsection.3.2.2}%

@@ -412,13 +412,18 @@
   \ifthenelse{\isundefined{\notes@conference}}{\conference{}}{}
   \ifthenelse{\isundefined{\notes@place}}{\place{}}{}
 
-  % \hypersetup{
-  %   pdftitle={\@title},
-  %   pdfsubject={\notes@subject},
-  %   pdfauthor={\@author},
-  %   pdfkeywords={\notes@speaker{}:\notes@conference{}:\notes@place{}},
-  % }
-  % \pdfinfo{/ModDate (D:\pdfdate)}
+  \hypersetup{
+    pdftitle={\@title},
+    pdfsubject={\notes@subject},
+    pdfauthor={\@author},
+    pdfkeywords={\notes@speaker{}:\notes@conference{}:\notes@place{}},
+    pdfinfo={
+      Author={\@author},
+      Title={\@title},
+      CreationDate={D:\pdfdate},
+      Keywords={\notes@speaker{};\notes@conference{};\notes@place{}},
+    }
+  }
   \maketitle
   \ifthenelse{\equal{\notes@type}{course}}{\tableofcontents}{}
 }
