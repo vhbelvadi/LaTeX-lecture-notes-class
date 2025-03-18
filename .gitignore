@@ -5,8 +5,8 @@
 # except ..
 !.gitignore
 !Sample/
-!commons.sty
-!lecture.cls
+!lecturenotes-styles.sty
+!lecturenotes.cls
 !Icon
 !_config.yml
 !LICENSE

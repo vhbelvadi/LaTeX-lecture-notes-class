@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lecture}
+\ProvidesClass{lecturenotes}
 \RequirePackage{ifthen}
 \RequirePackage[nodayofweek]{datetime}
 
@@ -244,7 +244,7 @@
 \RequirePackage{booktabs}
 \RequirePackage{multirow}
 \RequirePackage[fixlanguage]{babelbib}
-\RequirePackage{Commons}
+\RequirePackage{lecturenotes-styles}
 \RequirePackage{csquotes}
 \addtolength{\jot}{0.5em} %Add row spacing to align environment
 \RequirePackage[frenchstyle,narrowiints,largesmallcaps]{kpfonts-otf} % Comment out and uncomment the line two above for Palatino % fullsumlimits,fullintlimits not supported by kpfonts-otf

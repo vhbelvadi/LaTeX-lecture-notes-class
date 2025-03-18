@@ -37,7 +37,7 @@ Once you figure out where they should be placed in your TEXMFHOME tree, just mak
 Your documents based on this lecture class must adhere to the following blueprint:
 
 ```
-\documentclass[options]{lecture}
+\documentclass[options]{lecturenotes}
 
 \title{}
 \subtitle{}
@@ -142,6 +142,13 @@ There are some additional commands you can use _inside your document_, i.e. with
 `hyperref` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathtools` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `csquotes` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `microtype` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `amsmath` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `booktabs` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `multirow` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `unicode-math` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kpfonts-otf` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `fancyhdr` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mparhack` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `tikz` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathdots` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `xfrac` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `faktor` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `cancel` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `babel`
 
 ### Version history
+
+### 3.1
+**NB** Minor breaking change.
+- In preparation for CTAN this package is now called `lecturenotes` instead of `lecture` (I was informed by CTAN maintainers that the latter could cause confusion with existing `lectures` and `lecturer` classes and I am inclined to agree). **The only change you will need to make in existing documents** is to invoke the `lecturenotes` class instead of `lecture` as follows:
+```
+\documentclass[options]{lecturenotes}
+```
 
 ### 3.0
 **NB** This update modernises this class with LuaLaTeX support. While this change is highly recommended and in line with the development of LaTeX3 itself, for older packages that need pdflatex support [continue using v2 instead](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/tag/v2.6).
