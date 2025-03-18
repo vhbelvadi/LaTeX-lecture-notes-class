@@ -147,8 +147,9 @@ There are some additional commands you can use _inside your document_, i.e. with
 **NB** Minor breaking change.
 - In preparation for CTAN this package is now called `lecturenotes` instead of `lecture` (I was informed by CTAN maintainers that the latter could cause confusion with existing `lectures` and `lecturer` classes and I am inclined to agree). **The only change you will need to make in existing documents** is to invoke the `lecturenotes` class instead of `lecture` as follows:
 ```
-\documentclass[options]{lecturenotes}
+\documentclass[options]{lecture}   ===(becomes)===>>   \documentclass[options]{lecturenotes}
 ```
+Ideally this should mean editing just the very first line of your document(s).
 
 ### 3.0
 **NB** This update modernises this class with LuaLaTeX support. While this change is highly recommended and in line with the development of LaTeX3 itself, for older packages that need pdflatex support [continue using v2 instead](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/tag/v2.6).
