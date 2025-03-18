@@ -1,0 +1,156 @@
+\documentclass[a4paper,margin=1in]{article}
+\title{Lecture notes class}
+\author{V.H. Belvadi\thanks{hello@vhbelvadi.com}}
+
+\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{fancyvrb}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Introduction}
+
+A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks. A detailed article about this class can be found on the author's website (\url{http://vhbelvadi.com/latex-lecture-notes-class/}). The same data condensed into brief notes about working with this class, for those who are familiar with this sort of thing, can be found below.
+
+To work with this class the absolute minimum requirements are the \texttt{.cls} and \texttt{.sty} files, but this repository has several other files too. The easiest approach is to download the latest release from \url{https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest} and manually extract the two required files. Alternately, you can use svn or git sparse checkouts.
+
+A legacy version is available outside CTAN for use with pdf\LaTeX\ here: \url{https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/tag/v2.6}
+
+Please check the repository on Github for an up-to-date version history.
+
+\section{Installation}
+
+Simply copy the \texttt{.cls} and \texttt{.sty} included in this package into your \LaTeX\ document tree. On UNIX systems this is usually \texttt{~/texmf/}. If using apps like Texifier, simply tell the app where to look for these files.
+
+Although not necessary, it is highly recommended that you place these files inside their own folder with the tree \texttt{.../texmf/tex/latex/folder-name} for better package management.
+
+There are several resources online that can help you in greater detail when it comes to installing \texttt{.cls} and \texttt{.sty} files. Once you figure out where they should be placed in your \texttt{TEXMFHOME} tree, just make sure the two files reside together in the same folder.
+
+\section{Using the class}
+
+\subsection{Skeletal structure}
+
+Your documents based on this lecture class must adhere to the following blueprint:
+
+\begin{verbatim}
+\documentclass[options]{lecture}
+
+\title{}
+\subtitle{}
+\shorttitle{}
+\ccode{}
+\subject{}
+\speaker{}
+\spemail{}
+\author{}
+\email{}
+\flag{}
+\season{}
+\date{}{}{}
+\dateend{}{}{}
+\conference{}
+\place{}
+\attn{}
+\morelink{}
+
+\begin{document}
+\end{document}
+\end{verbatim}
+
+This is simply a list of \textit{possible} commands, not \textit{necessary} commands. In fact most of these commands are \textit{not} necessary and some work exclusively with others. A detailed explanation follows.
+
+\subsection{Overview}
+
+The document class \texttt{lecture} calls this class file. Options for the class are as outlined below.
+
+Only setting a title is compulsory. All other data (e.g. subtitle, course code, speaker, dates, seasons, author etc. are optional.) Some of these are used to set up the head of your document (e.g. season), headers of your pages (e.g. short title) and pdf attributes (e.g. subject data is only for the pdf metadata).
+
+Take a look at the \texttt{Sample.tex} file for an example of how these lines are used in a source file and for details of exactly what each command does. Also look at the \texttt{Sample.pdf} output file to see how (great) things will look in the end. Sample files are available in the repository: \url{https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest}
+
+\textbf{NB} The \texttt{season} command and the dates (start date only or both start and end dates) are mutually exclusive with the season taking precedence. You can set either Summer 2017 (the season) or 24th June, 2017 (the start date) or 24th June 2017--25th June 2017 (both start and end dates).
+
+\subsection{Options}
+
+\subsubsection{Compulsory}
+
+The following are primary options that must compulsorily be included. Pick one from each set below:
+
+\begin{enumerate}
+	\item The \textbf{language} of your document: \texttt{english}, \texttt{french}, \texttt{italian}, \texttt{usenglish} (same as english except for the mm/dd/yyyy format), \texttt{russian} (this automatically loads Cyrillic support), \texttt{german}, \texttt{swedish}
+	\item The \textbf{type} of your lecture notes: \texttt{seminar} usually for single class, session, seminar, lecture period; \texttt{course} for a collection of lectures (over a semester or over a few days); \texttt{talk} for brief notes for speakers (or any other use you can think of for condensed, two-column layouts)
+\end{enumerate}
+
+\textbf{NB} Please delete all aux files and then compile if you decide to change languages halfway through. Compile twice to update TOC in case of \texttt{course} type documents.
+
+\subsubsection{Optional}
+
+You can also include secondary options for your document. Again, pick one from each set below:
+
+\begin{enumerate}
+	\item Customise page headers as needed (default: current/next sections and subsections): \texttt{headertitle} to display the main title/short alternative title, \texttt{headersection} to display the current/next section as appropriate, \texttt{headersubsection} to display the current/next subsection as appropriate, \texttt{headerno} for a blank header (footers still display page numbers)
+	\item Customise theorem numbering as needed: \texttt{theoremnosection}, \texttt{theoremsection}, \texttt{theoremsubsection}
+	\item Choose if you want to start every new section on a new page/new right-hand page: \texttt{cleardoublepage}, \texttt{nocleardoublepage}
+	\item Optimise your document for printing: \texttt{oneside}, \texttt{twoside}
+	\item Choose between one- and two-column layouts: \texttt{onecolumn}, \texttt{twocolumn}
+\end{enumerate}
+
+\subsection{Additional commands}
+
+There are some additional commands you can use \textit{inside your document}, i.e. within \texttt{\\begin ... \\end} document, besides those which are already part of the blueprint given above:
+
+\begin{enumerate}
+	\item \verb+\lecture[duration]{dd}{mm}{yyyy}+ for use in \texttt{course} type documents for providing information about lectures in the margin
+	\item \verb+\separator+ for use in \texttt{talk} type documents to draw a visually helpful horizontal separator line
+	\item \verb+\tosay{message}+ for use in \texttt{talk} type documents to print messages inside a box to help recall important data
+	\item \verb+\margintext{message}+ to make useful notes in the margin
+	\item \texttt{\\} at the start of a paragraph to give it a line break and remove any indentation
+	\item \verb+\nl + at the start of a paragraph without either a line break or an indent (note the space following the command)
+	\item \verb+\runin{}+ as a handy approach to print texts in small caps (especially useful to start new sections/chapters/parts of a document)
+	\item \verb+\morelink{}+ to add a \verb+For more visit \texttt{_______}.+ link in the footer of the first page.
+\end{enumerate}
+
+\section{Miscellaneous}
+
+\subsection{Dependencies}
+\begin{multicols}{3}
+\begin{itemize}
+\item \texttt{hyperref}
+\item \texttt{mathtools}
+\item \texttt{csquotes}
+\item \texttt{microtype}
+\item \texttt{amsmath}
+\item \texttt{booktabs}
+\item \texttt{multirow}
+\item \texttt{unicode-math}
+\item \texttt{kpfonts-otf}
+\item \texttt{fancyhdr}
+\item \texttt{mparhack}
+\item \texttt{tikz}
+\item \texttt{mathdots}
+\item \texttt{xfrac}
+\item \texttt{faktor}
+\item \texttt{cancel}
+\item \texttt{babel}
+\end{itemize}
+\end{multicols}
+
+\subsection{Contributions}
+
+Translations are welcome and appreciated. General suggestions for improvement are welcome as well.
+
+Either fork this project and submit a pull request or, \textit{only in case of translations}, drop me an e-mail (\url{hello@vhbelvadi.com}) with the relevant translations and specify how you wish to be credited.
+
+\subsection{Even more}
+
+For up-to-date information about development of this class, star and/or watch and/or follow the repository on Github: \url{https://github.com/vhbelvadi/LaTeX-lecture-notes-class}
+
+\subsection{Acknowledgments}
+
+Thanks to \href{http://blog.poormansmath.net/}{Stefano Maggiolo} for initially helping me kickstart this and for his Italian translations. Thanks to \href{https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/2/commits/34301290ff554b446fc755fa4cc813b701f63a2c}{Aleksei Kozharin} for Russian translations, \href{https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/6}{Jan Heilund} for German translations and \href{https://github.com/vhbelvadi/LaTeX-lecture-notes-class/pull/7}{@eastlunder} for Swedish translations.
+
+Original release article: \url{http://vhbelvadi.com/latex-lecture-notes-class/}
+
+
+\end{document}
