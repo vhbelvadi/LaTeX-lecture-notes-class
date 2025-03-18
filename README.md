@@ -152,6 +152,11 @@ There are some additional commands you can use _inside your document_, i.e. with
 - Removed support for `inputenc` and `fontenc` due to LuaLaTeX (also addresses #10)
 - Bug fixes (issue #5 persists but using `\cleardoublepage` manually works)
 
+### 2.6
+[View here](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/tree/v2.6)
+- Legacy version with `pdfLaTeX` support
+- Bug fix, addresses #8
+
 ### 2.5
 - German translations courtesy of Jan Heilund.
 - Swedish translations courtesy of @eastlunder.
