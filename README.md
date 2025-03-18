@@ -9,7 +9,7 @@
 
 **Webpage:** [http://vhbelvadi.com/latex-lecture-notes-class/](http://vhbelvadi.com/latex-lecture-notes-class)
 
-**Current release:** v3.1 <a href="https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20release-brightgreen.svg" style="vertical-align: text-bottom;margin-left: 24px;"></a>
+**Current release:** v3.2 <a href="https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20release-brightgreen.svg" style="vertical-align: text-bottom;margin-left: 24px;"></a>
 
 **Legacy release:** For `pdfLaTeX` support please [use v2](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/tag/v2.6).
 
@@ -68,8 +68,8 @@ The document class `lecture` calls this class file. Options for the class are as
 Only setting a title is compulsory. All other data (e.g. subtitle, course code, speaker, dates, seasons, author etc. are optional.)
 Some of these are used to set up the head of your document (e.g. season), headers of your pages (e.g. short title) and pdf attributes (e.g. subject data is only for the pdf metadata).
 
-Take a look at the [Sample.tex](Sample/Sample.tex) file for an example of how these lines are used in a source file and for details of exactly what each command does.
-Also look at the [Sample.pdf](Sample/Sample.pdf) output file to see how (great) things will look in the end.
+Take a look at the [lecturenotes-sample.tex](sample/lecturenotes-sample.tex) file for an example of how these lines are used in a source file and for details of exactly what each command does.
+Also look at the [lecturenotes-sample.pdf](sample/lecturenotes-sample.pdf) output file to see how (great) things will look in the end.
 
 **NB** Not all commands are shown in the sample files though most are.
 
@@ -142,6 +142,11 @@ There are some additional commands you can use _inside your document_, i.e. with
 `hyperref` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathtools` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `csquotes` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `microtype` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `amsmath` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `booktabs` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `multirow` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `unicode-math` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `kpfonts-otf` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `fancyhdr` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mparhack` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `tikz` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `mathdots` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `xfrac` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `faktor` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `cancel` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `babel`
 
 ### Version history
+
+### 3.2
+- Style file merged into class: the package now functions as a single `.cls` file
+- Minor changes in repo structure for CTAN
+- Documentation updated to reflect new structure using just one `.cls` file
 
 ### 3.1
 **NB** Minor breaking change.
