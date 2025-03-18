@@ -1,4 +1,4 @@
-# LaTeX class for lecture notes
+# The `lecturenotes` class<br/>LaTeX class for lectures, seminars, courses or brief talks
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
