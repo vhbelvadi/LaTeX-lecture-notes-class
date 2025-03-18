@@ -11,6 +11,8 @@
 
 **Current release:** v3.0 <a href="https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/latest"><img src="https://img.shields.io/badge/Download-latest%20release-brightgreen.svg" style="vertical-align: text-bottom;margin-left: 24px;"></a>
 
+**Legacy release:** For `pdfLaTeX` support please [use v2](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/tag/v2.6).
+
 **Description:** A LaTeX document class built for lecture notes for classes/seminars, entire courses or brief talks.
 A detailed article about this class can be found on [the author's website](http://vhbelvadi.com/latex-lecture-notes-class/).
 The same data condensed into brief notes about working with this class, for those who are familiar with this sort of thing, can be found below.
@@ -142,7 +144,7 @@ There are some additional commands you can use _inside your document_, i.e. with
 ### Version history
 
 ### 3.0
-**NB** This update modernises this class with LuaLaTeX support. While this change is highly recommended and in line with the development of LaTeX3 itself, for older packages that need pdflatex support continue using v2 instead.
+**NB** This update modernises this class with LuaLaTeX support. While this change is highly recommended and in line with the development of LaTeX3 itself, for older packages that need pdflatex support [continue using v2 instead](https://github.com/vhbelvadi/LaTeX-lecture-notes-class/releases/tag/v2.6).
 - LuaLaTeX support (highly recommended for opentype and native unicode support introduced in this version)
 - Breaks pdflatex support (for older documents use v2 but for everything else LuaLaTeX is recommended)
 - Switched to OTF support with [`kpfonts-otf`](https://gb.mirrors.cicku.me/ctan/fonts/kpfonts-otf/doc/Kpfonts-OTF-Doc-English.pdf) replacing [`kpfonts`](https://www.tug.org/TUGboat/tb31-3/tb99caignaert.pdf) (also addresses #9)
