@@ -142,10 +142,10 @@ There are some additional commands you can use _inside your document_, i.e. with
 ### Version history
 
 ### 3.0
-**NB** This modernises this package with LuaLaTeX support. While this change is highly recommended and in line with the development of LaTeX3 itself, for older packages that need pdflatex support continue using v2 instead.
-- LuaLaTeX support (recommended---XeLaTeX does not support `microtype` yet)
+**NB** This update modernises this class with LuaLaTeX support. While this change is highly recommended and in line with the development of LaTeX3 itself, for older packages that need pdflatex support continue using v2 instead.
+- LuaLaTeX support (highly recommended for opentype and native unicode support introduced in this version)
 - Breaks pdflatex support (for older documents use v2 but for everything else LuaLaTeX is recommended)
-- Switched to OTF support with `kpfonts-otf` replacing `kpfonts` (addresses #9)
+- Switched to OTF support with [`kpfonts-otf`](https://gb.mirrors.cicku.me/ctan/fonts/kpfonts-otf/doc/Kpfonts-OTF-Doc-English.pdf) replacing [`kpfonts`](https://www.tug.org/TUGboat/tb31-3/tb99caignaert.pdf) (also addresses #9)
 - `pdfinfo` incorporated into `hyperref` (addresses #10)
 - Removed support for `inputenc` and `fontenc` due to LuaLaTeX (also addresses #10)
 - Bug fixes (issue #5 persists but using `\cleardoublepage` manually works)
